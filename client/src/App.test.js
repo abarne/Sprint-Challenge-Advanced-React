@@ -1,17 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-// import App from './App';
-import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
+import App from './App';
 
-// it('renders without crashing', () => {
-// 	const div = document.createElement('div');
-// 	ReactDOM.render(<App />, div);
-// 	ReactDOM.unmountComponentAtNode(div);
-// });
-
-describe('hello', () => {
-	it('should contain name', () => {
-		const { getByText } = render(<App name="Name" />);
-		getByText('Name');
+describe('Check for correct displays', () => {
+	it('should only be 1 item with class .App', () => {
+		const component = shallow(<App />);
+		const wrapper = component.find('.App');
+		expect(wrapper.length).toBe(1);
+	});
+	it('person class no rendered yet, should be 0', () => {
+		const component = shallow(<App />);
+		const wrapper = component.find('.person');
+		expect(wrapper.length).toBe(0);
 	});
 });
