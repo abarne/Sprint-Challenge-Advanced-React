@@ -1,3 +1,20 @@
+## Self Study Questions
+
+ Why would you use class component over function components (removing hooks from the question)?
+    Making your own state inside the constructor to pass information to other components can be useful.
+
+ Name three lifecycle methods and their purposes.
+    componentDidMount()-- is invoked immediately after a component is mounted
+    componentDidUpdtate()-- is invoked immediately after updating occurs. This method is not called for the initial render.
+    componentWillUnmount()--  is invoked immediately before a component is unmounted and destroyed. good for cleaning up timers or canceling network requests
+
+ What is the purpose of a custom hook?
+    reusable code
+
+ Why is it important to test our apps?
+    good testing results in fewer bugs
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
